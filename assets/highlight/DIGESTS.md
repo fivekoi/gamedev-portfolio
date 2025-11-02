@@ -21,9 +21,13 @@ The full list of digests for every file can be found below.
 ```
 sha384-rFCBWxbZHxZD51qKR2cdayIcKUSHS3p1PWPIs1kjgsP7lu9ZP32ah/2DoQUm/rTg /es/languages/cpp.js
 sha384-+1Koxl0St78gEZW5CpFK+dbLp7yNsfwLzzQUsSGimV4k/RVJUz6YvqtsqtdbJyKf /es/languages/cpp.min.js
+sha384-0s8f7nphuRu8IIkFNCeOVZhvbjt7YKZEHl38OjfkCkdtnwIUvwRNbxxUHkCdcYjm /es/languages/csharp.js
+sha384-xLfGW0hIBHie9xNFuVroNihI0BdEO8FKxOeCdyJBrO1eM7s5BsQ8F3fLtFydQZ+Z /es/languages/csharp.min.js
 sha384-Z5Ja/rxBluJ4iPYwJYn2numfw2XFmlp3qLL1aJ1SZqyTjKWwMh9yWfpNCOqf3vAm /languages/cpp.js
 sha384-B711MHXDqRvH/pKkxJk84RyRt9g0qyAJFsu2XukZKoCdnEiBmA6Aq9fO23ZCS7qk /languages/cpp.min.js
-sha384-UBkXCHHAD9Lh3zwSgaG6lZGPgj2LdqEfRmpE6/rveAeSk21yCpvmFCfszjNmdfvD /highlight.js
-sha384-heo7KW/sQYnKv4mv1wsPydr05rrzJV9jwwVqsaVmI/VG83rpDDBYchtYgOyPBoih /highlight.min.js
+sha384-NTF0oluJbKDCxwGTujk+IsRQRbf+waUyDilA5GhOA+VSoxhyApQpmDWMjxfFO3dt /languages/csharp.js
+sha384-Z+o7SU/ldIEIdOIqpMV+9s2n8EE1rZTFSRv5Sd7rlaSoPTpyflmmZ/oRb6ycw/2s /languages/csharp.min.js
+sha384-p5KVieczD5vM1tY9+7gm4eoF2ETkOWG8DeMG8+aTXx9YIGbkEmJB437zc1GYeE2K /highlight.js
+sha384-wN5Hxcn3qSSLGS9ymlYPyYdsQu5Io13svgqn1tl6vtoo979ENLGDxxAa599VjT02 /highlight.min.js
 ```
 

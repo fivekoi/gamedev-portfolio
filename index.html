@@ -187,8 +187,43 @@ void PlayerMovement::Update(float dt){
 								<a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
 								</div>
 
-								<p>I am currently developing a P2P multiplayer game using Unity and Steamworks.</p>
-								<p>**Mention server authoritize pickup system and the networking with connecting through steam invite etc</p>
+								<p>I am currently developing a P2P multiplayer game using Unity and Steamworks (for their relay servers). Players can connect to each other directly through Steam invite.
+								</p>
+								<p>So far I have implemented basic networked player movement and a server-authoritative item pickup/throw system (although in this case, the server is the hosting player). 
+									When a player tries to pickup an item, they will send a request RPC to the host. The host decides if the pickup is valid, and then hands off
+									ownership of the object to that player. This avoids duplication and keeps state consistent between players.
+								</p>
+								<pre><code class="language-csharp">[ServerRpc(RequireOwnership = false)]
+public void Pickup(PlayerController playerController, NetworkConnection conn = null)
+{
+	// If owned by server (no one is holding)
+	if(base.OwnerId == -1)
+	{
+		base.GiveOwnership(conn);
+		PickupObserver();
+		playerController.ConfirmPickup(conn, this);
+	}
+	else
+	{
+		playerController.FailedPickup(conn);
+	}
+}
+
+// Updates physics on client side
+[ObserversRpc]
+private void PickupObserver()
+{
+	if(_rb && _boxCollider)
+	{
+		_rb.isKinematic = true;
+		_rb.useGravity = false;
+		_boxCollider.enabled = false;
+	}
+}</code></pre>
+								<p>
+									I am using this project to explore how to build small networked systems. 
+									It is still in early development, but my current focus is on implementing new gameplay mechanics for each of the areas I have greyboxed out. 
+								</p>
 							</article>
 
 						<!-- Hand Rehab App -->
